@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GyP-3r-vO5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News ListVC-->
+        <scene sceneID="W5f-Tj-80Q">
+            <objects>
+                <tableViewController storyboardIdentifier="NewsListVC" id="jeN-6S-Ter" customClass="NewsListVC" customModule="Hacker_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BM1-XH-VXM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="jeN-6S-Ter" id="XaX-Ji-4wM"/>
+                            <outlet property="delegate" destination="jeN-6S-Ter" id="bM0-j4-cC5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sTv-yz-rBf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvp-5f-7Qs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="70.982142857142847"/>
+        </scene>
+        <!--News DetailVC-->
+        <scene sceneID="NfL-L1-pjg">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailVC" id="1YR-Ib-OpW" customClass="NewsDetailVC" customModule="Hacker_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TUN-J1-e4O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xte-5u-HzK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="POU-vP-OXd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xte-5u-HzK" firstAttribute="leading" secondItem="POU-vP-OXd" secondAttribute="leading" id="Ijz-zT-r1v"/>
+                            <constraint firstItem="POU-vP-OXd" firstAttribute="trailing" secondItem="xte-5u-HzK" secondAttribute="trailing" id="hmN-lm-soq"/>
+                            <constraint firstItem="xte-5u-HzK" firstAttribute="top" secondItem="POU-vP-OXd" secondAttribute="top" id="ipr-sr-62k"/>
+                            <constraint firstAttribute="bottom" secondItem="xte-5u-HzK" secondAttribute="bottom" id="vEi-sW-Qr2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="xte-5u-HzK" id="qba-VK-Kgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXs-J4-P3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671.0144927536232" y="70.982142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hxv-DN-BI5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GyP-3r-vO5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LhK-gL-G1F">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jeN-6S-Ter" kind="relationship" relationship="rootViewController" id="QXh-Xf-8Kv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLg-Dd-7Mq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
