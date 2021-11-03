@@ -104,7 +104,7 @@ extension NewsListVC: UITextFieldDelegate {
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         print("TextField should end editing method called")
         print(textField.text ?? "")
-        return true;
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

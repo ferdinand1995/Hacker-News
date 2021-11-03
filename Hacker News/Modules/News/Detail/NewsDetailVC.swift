@@ -26,7 +26,7 @@ class NewsDetailVC: UIViewController, WKNavigationDelegate {
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         /// - NOTE: Set frame to exact below of navigation bar if available
-        progressView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: 24)
+        progressView.frame = CGRect(x: 0, y: 48, width: self.view.bounds.size.width, height: 24)
         self.view.addSubview(progressView)
 
         webView.addObserver(self, forKeyPath:
@@ -37,6 +37,12 @@ class NewsDetailVC: UIViewController, WKNavigationDelegate {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             progressView.progress = Float(webView.estimatedProgress)
+            progressView.alpha = 1.0
+            if webView.estimatedProgress >= 1 {
+                UIView.animate(withDuration: 0.3) {
+                    self.progressView.alpha = 0
+                }
+            }
         }
     }
 }

@@ -24,6 +24,7 @@
 		B1A1DFEF2731152100A4AB5C /* HackerNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A1DFEE2731152100A4AB5C /* HackerNews.swift */; };
 		B1A1DFF227311D5900A4AB5C /* NewsSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A1DFF027311D5800A4AB5C /* NewsSearchCell.swift */; };
 		B1A1DFF327311D5900A4AB5C /* NewsSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A1DFF127311D5800A4AB5C /* NewsSearchCell.xib */; };
+		B1A1DFF52731276D00A4AB5C /* ConstantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A1DFF42731276D00A4AB5C /* ConstantManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B1A1DFEE2731152100A4AB5C /* HackerNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNews.swift; sourceTree = "<group>"; };
 		B1A1DFF027311D5800A4AB5C /* NewsSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchCell.swift; sourceTree = "<group>"; };
 		B1A1DFF127311D5800A4AB5C /* NewsSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsSearchCell.xib; sourceTree = "<group>"; };
+		B1A1DFF42731276D00A4AB5C /* ConstantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				B1A1DFEA2731140000A4AB5C /* Parents */,
 				B1A1DFE0273112C900A4AB5C /* Extension */,
+				B1A1DFF42731276D00A4AB5C /* ConstantManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				B1A1DFF227311D5900A4AB5C /* NewsSearchCell.swift in Sources */,
 				B1A1DFD32731108500A4AB5C /* NewsListVC.swift in Sources */,
 				B1A1DFE2273112DD00A4AB5C /* UITableView+Utility.swift in Sources */,
+				B1A1DFF52731276D00A4AB5C /* ConstantManager.swift in Sources */,
 				B1A1DFEF2731152100A4AB5C /* HackerNews.swift in Sources */,
 				B1A1DFDC273111DC00A4AB5C /* NewsCell.swift in Sources */,
 			);
